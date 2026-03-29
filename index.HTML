@@ -1,1 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>CS2 Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+
+<div id="video-screen">
+    <video id="introVideo" autoplay>
+        <source src="intro.mp4" type="video/mp4">
+        
+    </video>
+
+    <button id="skipBtn">skip</button>
+</div>
+
+
+<div id="main-site">
+
+<header>
+    <h1>CS2 Portal</h1>
+
+    <nav>
+        <button onclick="showPage('maps')">Карты и раскид</button>
+        <button onclick="showPage('skins')">Скины</button>
+        <button onclick="showPage('pros')">Про игроки</button>
+    </nav>
+</header>
+
+<main>
+
+<section id="maps" class="page">
+    <h2>map CS2</h2>
+    <p>tyt map</p>
+</section>
+
+<section id="skins" class="page">
+    <h2>skin CS2</h2>
+    <p>tyt skins</p>
+</section>
+
+<section id="pros" class="page">
+    <h2>Pro player</h2>
+    <p>tyt pro</p>
+</section>
+
+</main>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
