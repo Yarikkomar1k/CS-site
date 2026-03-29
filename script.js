@@ -8,7 +8,7 @@ function showPage(id, btn) {
 /* Карты */
 const maps = [
     {
-        name: "Dust 2",
+        name: "Dust 2", 
         t: 49,
         ct: 51,
         fact: "У Counter-Strike 2 карта Dust II — це класика з простим дизайном і відкритими лініями, де часто відбуваються прямі перестрілки, особливо на Long і в центрі. Вона добре підходить для тренування стрільби та базових навичок, хоча може здаватися одноманітною.",
@@ -214,71 +214,71 @@ function renderMarket(list = skinsFN) {
 const teams = [
     {
         name: "Team Vitality",
-        logo: "https://upload.wikimedia.org/wikipedia/en/f/fd/Team_Vitality_logo.png",
+        logo: "https://static.flashscore.com/res/image/data/AaUkHZrG-lG2kTCDf.png",
         banner: "https://files.vgtimes.ru/si/post_129161_16x9_ru.webp",
         coach: "XTQZZZ",
         players: ["ZywOo", "apEX", "flameZ", "mezii", "ropz"]
     },
     {
         name: "Natus Vincere",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/5/5e/Natus_Vincere_Logo.png",
-        banner: "https://img.sportarena.com/2026/03/navi-blast-cs2-1024x682.jpg",
+        logo: "https://upload.wikimedia.org/wikipedia/ru/thumb/5/5f/NAVI_Logo.svg/960px-NAVI_Logo.svg.png",
+        banner: "https://cdn.discordapp.com/attachments/1477721754263879793/1487857141913223249/image.png?ex=69caaa71&is=69c958f1&hm=c315d64f5a71f29d3db812718cd73dab0e69ceb6b02ac5e9a0c2fd5c18bc811d&",
         coach: "B1ad3",
         players: ["b1t", "Aleksib", "iM", "w0nderful", "makazze"]
     },
     {
         name: "Team Spirit",
-        logo: "https://upload.wikimedia.org/wikipedia/en/f/fc/Team_Spirit_logo.png",
-        banner: "https://images.blix.gg/uploads/posts/2024-01/1705311234_spirit.webp",
+        logo: "https://ru.csgo.com/thumb/team/size-og-image/2018/09/7/NzZ4cEhVU0hablY=.png",
+        banner: "https://cybersport.metaratings.ru/_images/insecure/w-1360:h-1040/aHR0cHM6Ly9zdG9yYWdlLnlhbmRleGNsb3VkLm5ldC9zMy1tZXRhcmF0aW5ncy1zdG9yYWdlL2ltYWdlcy84MS9jMi84MWMyZDkzYWE4YzFjNDVhMzE2MTIxZjZkYjk2Y2JkMi5wbmc=.webp",
         coach: "hally",
         players: ["donk", "sh1ro", "magixx", "zont1x", "tN1R"]
     },
     {
         name: "MOUZ",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/6/6b/MOUZ_Logo_2023.png",
-        banner: "https://images.blix.gg/uploads/posts/2024-01/1705311301_mouz.webp",
+        logo: "https://media.cyberscore.live/static/teams/2025/6/3611aebb-c9f0-4239-9d55-850bffeef107.webp",
+        banner: "https://dota2.net/thumb/post/size-og-image/2026/01/138583/MTM4NTgzcTJVWHVkTnVKSA==.jpg",
         coach: "sycrone",
         players: ["torzsi", "xertioN", "Jimpphat", "Brollan", "Spinx"]
     },
     {
         name: "Team Falcons",
-        logo: "https://upload.wikimedia.org/wikipedia/en/3/3e/Team_Falcons_logo.png",
-        banner: "https://images.blix.gg/uploads/posts/2024-01/1705311500_falcons.webp",
+        logo: "https://upload.wikimedia.org/wikipedia/ru/9/9a/Team_Falcons_logo.png",
+        banner: "https://ggscore.com/media/news/pic-20251223-1966x1106-3596898301.jpeg",
         coach: "zonic",
         players: ["NiKo", "m0NESY", "TeSeS", "kyxsan", "kyousuke"]
     },
     {
         name: "FURIA Esports",
-        logo: "https://upload.wikimedia.org/wikipedia/en/f/f9/FURIA_Esports_logo.png",
-        banner: "https://images.blix.gg/uploads/posts/2024-01/1705311600_furia.webp",
+        logo: "https://ru.csgo.com/thumb/team/size-team-logo-big/2018/12/187/MTg3RHZkWHpnajBzZg==.png",
+        banner: "https://sportilinet.kz/userdata/news/news_10677/FURIA_s_kazahstantsem_molodoy_proigrala_s.webp",
         coach: "sidde",
         players: ["FalleN", "yuurih", "KSCERATO", "YEKINDAR", "molodoy"]
     },
     {
         name: "PARIVISION",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/8/8c/Esports_logo_placeholder.png",
-        banner: "https://images.blix.gg/uploads/posts/2024-01/1705311700_parivision.webp",
+        logo: "https://ru.csgo.com/thumb/team/size-team-logo-big/2024/05/616/NjE2UlRBb1dHZ2xGZA==.png",
+        banner: "https://3dnews.ru/assets/external/illustrations/2026/01/26/1135821/l527psPq0DbLSedEb0rvne.jpg",
         coach: "dastan",
         players: ["Jame", "BELCHONOKK", "xiELO", "nota", "zweih"]
     },
     {
         name: "The MongolZ",
-        logo: "https://upload.wikimedia.org/wikipedia/en/7/7e/The_Mongolz_logo.png",
-        banner: "https://images.blix.gg/uploads/posts/2024-01/1705311800_mongolz.webp",
+        logo: "https://ru.csgo.com/thumb/team/size-team-logo-big/2023/04/553/NTUza2Z6SFpUSGZ4ag==.png",
+        banner: "https://games-ba.ru/uploads/posts/2025-08/1756113330-11756109718-15546adcf-0e19-4a67-babf-6220357eeeac.webp",
         coach: "maaRaa",
         players: ["bLitz", "Techno", "mzinho", "910", "cobrazera"]
     },
     {
         name: "Aurora Gaming",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/8/8c/Esports_logo_placeholder.png",
-        banner: "https://images.blix.gg/uploads/posts/2024-01/1705311900_aurora.webp",
+        logo: "https://ru.csgo.com/thumb/team/size-og-image/2022/08/506/NTA2QlhoYnN6QUZBdw==.png",
+        banner: "https://media.esports.gg/uploads/2025/04/cs-aurora-new-hed.jpg",
         coach: "",
         players: ["MAJ3R", "XANTARES", "woxic", "soulfly", "Wicadia"]
     },
     {
         name: "G2 Esports",
-        logo: "https://upload.wikimedia.org/wikipedia/en/1/12/G2_Esports_logo.svg",
-        banner: "https://images.blix.gg/uploads/posts/2024-01/1705311369_g2.webp",
+        logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNk_Rkzut3poCkVcCZWAkTQpUhe68aG1n6cQ&s",
+        banner: "https://esportsinsider.com/wp-content/uploads/2025/09/BLAST-Open-G2-large.jpg",
         coach: "TaZ",
         players: ["huNter-", "malbsMd", "SunPayus", "HeavyGod", "MATYS"]
     }
