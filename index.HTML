@@ -2,53 +2,56 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>CS2 Portal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS2 Ultimate Database</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<nav>
+    <button class="tab-btn active" onclick="showPage('p1', this)">Головна</button>
+    <button class="tab-btn" onclick="showPage('p2', this)">Карти</button>
+    <button class="tab-btn" onclick="showPage('p3', this)">Ринок CS2</button>
+    <button class="tab-btn" onclick="showPage('p4', this)">Топ команди</button>
+</nav>
 
-<div id="video-screen">
-    <video id="introVideo" autoplay>
-        <source src="intro.mp4" type="video/mp4">
-        
-    </video>
+<div class="container">
+    <section id="p1" class="page active">
+        <h1 class="main-title">CS2 HUB</h1>
+        <p>Статистика карт, ринок скинів та топ команды CS2.</p>
+        <div class="hero-banner">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/csgo/images/csgo_react/social/cs2.jpg">
+        </div>
+    </section>
 
-    <button id="skipBtn">skip</button>
-</div>
+    <section id="p2" class="page">
+        <h2>Карти CS2</h2>
+        <div class="maps-grid" id="mapsContainer"></div>
+    </section>
 
+    <section id="p3" class="page">
+        <h2>Ринок CS2 (Steam Market)</h2>
+        <input type="text" id="mSearch" placeholder="Поиск скина...">
+        <div class="market-container">
+            <div class="table-scroll">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Предмет</th>
+                            <th>Якість</th>
+                            <th>Ринок</th>
+                        </tr>
+                    </thead>
+                    <tbody id="mBody"></tbody>
+                </table>
+            </div>
+        </div>
+    </section>
 
-<div id="main-site">
-
-<header>
-    <h1>CS2 Portal</h1>
-
-    <nav>
-        <button onclick="showPage('maps')">Карты и раскид</button>
-        <button onclick="showPage('skins')">Скины</button>
-        <button onclick="showPage('pros')">Про игроки</button>
-    </nav>
-</header>
-
-<main>
-
-<section id="maps" class="page">
-    <h2>map CS2</h2>
-    <p>tyt map</p>
-</section>
-
-<section id="skins" class="page">
-    <h2>skin CS2</h2>
-    <p>tyt skins</p>
-</section>
-
-<section id="pros" class="page">
-    <h2>Pro player</h2>
-    <p>tyt pro</p>
-</section>
-
-</main>
-
+    <section id="p4" class="page">
+        <h2>Топ команди CS2</h2>
+        <div id="teamsList" class="teams-container"></div>
+    </section>
 </div>
 
 <script src="script.js"></script>
