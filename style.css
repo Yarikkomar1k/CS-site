@@ -57,6 +57,10 @@ nav {
     object-fit: cover;
 }
 
+
+
+
+
 /* Карти */
 .maps-grid {
     display: grid;
@@ -97,6 +101,8 @@ nav {
 
 
 
+
+
 /* Ринок */
 .market-container {
     background: var(--card);
@@ -117,6 +123,8 @@ input {
     border-radius: 8px;
     margin-bottom: 20px;
 }
+
+
 
 /* Команди */
 .team-row {

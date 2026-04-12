@@ -5,7 +5,12 @@ function showPage(id, btn) {
     btn.classList.add('active');
 }
 
-/* Карты */
+
+
+
+
+
+/* Карти */
 const maps = [
     {
         name: "Dust 2", 
@@ -79,7 +84,12 @@ function initMaps() {
     `).join('');
 }
 
-/* Рынок Steam */
+
+
+
+
+
+/* Ринок Steam */
 const skinsFN = [
 { name: "AK-47 | Redline (FN)", price: 1700, rarity: "classified" },
 { name: "AK-47 | Asiimov (FN)", price: 5200, rarity: "covert" },
@@ -210,19 +220,22 @@ function renderMarket(list = skinsFN) {
         `;
     }).join('');
 }
-/* Команды */
+
+
+
+/* Команди */
 const teams = [
     {
         name: "Team Vitality",
         logo: "https://static.flashscore.com/res/image/data/AaUkHZrG-lG2kTCDf.png",
-        banner: "https://files.vgtimes.ru/si/post_129161_16x9_ru.webp",
+        banner: "https://rus.egw.news/_next/image?url=https%3A%2F%2Fegw.news%2Fuploads%2Fnews%2F1%2F17%2F1746341663391_1746341663391.webp&w=1920&q=75",
         coach: "XTQZZZ",
         players: ["ZywOo", "apEX", "flameZ", "mezii", "ropz"]
     },
     {
         name: "Natus Vincere",
         logo: "https://upload.wikimedia.org/wikipedia/ru/thumb/5/5f/NAVI_Logo.svg/960px-NAVI_Logo.svg.png",
-        banner: "https://cdn.discordapp.com/attachments/1477721754263879793/1487857141913223249/image.png?ex=69caaa71&is=69c958f1&hm=c315d64f5a71f29d3db812718cd73dab0e69ceb6b02ac5e9a0c2fd5c18bc811d&",
+        banner: "https://d3dwep9z8m8y9r.cloudfront.net/publications/2026/03/publications-11869/thumbnail/60749/Site_1738x800-1.png",
         coach: "B1ad3",
         players: ["b1t", "Aleksib", "iM", "w0nderful", "makazze"]
     },
@@ -243,7 +256,7 @@ const teams = [
     {
         name: "Team Falcons",
         logo: "https://upload.wikimedia.org/wikipedia/ru/9/9a/Team_Falcons_logo.png",
-        banner: "https://ggscore.com/media/news/pic-20251223-1966x1106-3596898301.jpeg",
+        banner: "https://liquipedia.net/commons/images/thumb/e/e1/Team_Falcons_at_BLAST_Rivals_Fall_2025.jpg/450px-Team_Falcons_at_BLAST_Rivals_Fall_2025.jpg",
         coach: "zonic",
         players: ["NiKo", "m0NESY", "TeSeS", "kyxsan", "kyousuke"]
     },
