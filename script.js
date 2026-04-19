@@ -224,7 +224,7 @@ const teams = [
     {
         name: "Team Vitality",
         logo: "https://static.flashscore.com/res/image/data/AaUkHZrG-lG2kTCDf.png",
-        banner: "https://rus.egw.news/_next/image?url=https%3A%2F%2Fegw.news%2Fuploads%2Fnews%2F1%2F17%2F1746341663391_1746341663391.webp&w=1920&q=75",
+        banner: "https://vitality.gg/cdn/shop/articles/CS2_BLAST_AustinMajor_champions_CP_32bf2ec4-84c3-41e0-922f-ef766f1dc0d5.jpg?v=1751307798",
         coach: "XTQZZZ",
         players: ["ZywOo", "apEX", "flameZ", "mezii", "ropz"]
     },
@@ -245,7 +245,7 @@ const teams = [
     {
         name: "MOUZ",
         logo: "https://media.cyberscore.live/static/teams/2025/6/3611aebb-c9f0-4239-9d55-850bffeef107.webp",
-        banner: "https://dota2.net/thumb/post/size-og-image/2026/01/138583/MTM4NTgzcTJVWHVkTnVKSA==.jpg",
+        banner: "https://csmarket.gg/blog/wp-content/uploads/2024/05/l06pRMt3I4ydXnSKLfIsi-1-1.webp",
         coach: "sycrone",
         players: ["torzsi", "xertioN", "Jimpphat", "Brollan", "Spinx"]
     },
@@ -259,14 +259,14 @@ const teams = [
     {
         name: "FURIA Esports",
         logo: "https://ru.csgo.com/thumb/team/size-team-logo-big/2018/12/187/MTg3RHZkWHpnajBzZg==.png",
-        banner: "https://sportilinet.kz/userdata/news/news_10677/FURIA_s_kazahstantsem_molodoy_proigrala_s.webp",
+        banner: "https://img-cdn.hltv.org/gallerypicture/kqLcqeMsYssGlYXppODOVo.jpg?auto=compress&fm=avif&ixlib=java-2.1.0&m=%2Fm.png&mw=160&mx=30&my=710&q=75&w=1200&s=ade975084c3cc18de7d5bfea7fc2e153",
         coach: "sidde",
         players: ["FalleN", "yuurih", "KSCERATO", "YEKINDAR", "molodoy"]
     },
     {
         name: "PARIVISION",
         logo: "https://ru.csgo.com/thumb/team/size-team-logo-big/2024/05/616/NjE2UlRBb1dHZ2xGZA==.png",
-        banner: "https://3dnews.ru/assets/external/illustrations/2026/01/26/1135821/l527psPq0DbLSedEb0rvne.jpg",
+        banner: "https://img-cdn.hltv.org/gallerypicture/tWRwQr1Tbp6b_gR5-ZzUCW.jpg?auto=compress&fm=avif&ixlib=java-2.1.0&m=%2Fm.png&mw=160&mx=30&my=710&q=75&w=1200&s=941dd296eb29a75e61d4bbe490889f4d",
         coach: "dastan",
         players: ["Jame", "BELCHONOKK", "xiELO", "nota", "zweih"]
     },
