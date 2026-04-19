@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CS2 Ultimate Database</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -15,24 +18,36 @@
     <button class="tab-btn" onclick="showPage('p4', this)">Топ команди</button>
 </nav>
 
+
 <div class="container">
+
     <section id="p1" class="page active">
-        <h1 class="main-title">CS2 HUB</h1>
-        <p>Статистика карт, ринок скинів та топ команди CS2.</p>
-        <div class="hero-banner">
-            <img src="https://cdn.cloudflare.steamstatic.com/apps/csgo/images/csgo_react/social/cs2.jpg">
+        <h1 class="main-title fade-in">CS2 HUB</h1>
+        <p class="fade-in">Статистика карт, ринок скинів та топ команди CS2.</p>
+
+        <div class="hero-banner fade-in">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/csgo/images/csgo_react/social/cs2.jpg" alt="CS2">
         </div>
     </section>
 
+    <!-- КАРТИ -->
     <section id="p2" class="page">
-        <h2>Карти CS2</h2>
+        <h2 class="fade-in">Карти CS2</h2>
         <div class="maps-grid" id="mapsContainer"></div>
     </section>
 
+    <!-- РИНОК -->
     <section id="p3" class="page">
-        <h2>Ринок CS2 (Steam Market)</h2>
-        <input type="text" id="mSearch" placeholder="Поиск скина...">
-        <div class="market-container">
+        <h2 class="fade-in">Ринок CS2 (Steam Market)</h2>
+
+        <input 
+            type="text" 
+            id="mSearch" 
+            placeholder="Поиск скина..." 
+            class="fade-in"
+        >
+
+        <div class="market-container fade-in">
             <div class="table-scroll">
                 <table>
                     <thead>
@@ -48,12 +63,16 @@
         </div>
     </section>
 
+    <!-- КОМАНДИ -->
     <section id="p4" class="page">
-        <h2>Топ команди CS2</h2>
+        <h2 class="fade-in">Топ команди CS2</h2>
         <div id="teamsList" class="teams-container"></div>
     </section>
+
 </div>
 
+
 <script src="script.js"></script>
+
 </body>
 </html>

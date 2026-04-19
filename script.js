@@ -1,18 +1,46 @@
 function showPage(id, btn) {
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-    document.getElementById(id).classList.add('active');
+    const pages = document.querySelectorAll('.page');
+    const buttons = document.querySelectorAll('.tab-btn');
+
+    pages.forEach(p => p.classList.remove('active'));
+    buttons.forEach(b => b.classList.remove('active'));
+
+    const page = document.getElementById(id);
+    page.classList.add('active');
     btn.classList.add('active');
+
+    animateFade(page);
+
+    setTimeout(animateCards, 100);
 }
 
+function animateFade(container) {
+    const els = container.querySelectorAll('.fade-in');
 
+    els.forEach((el, i) => {
+        el.style.opacity = 0;
+        el.style.transform = "translateY(20px)";
 
+        setTimeout(() => {
+            el.style.opacity = 1;
+            el.style.transform = "translateY(0)";
+        }, i * 150);
+    });
+}
 
+function animateCards() {
+    const cards = document.querySelectorAll('.map-card, .team-card');
 
+    cards.forEach((card, i) => {
+        setTimeout(() => {
+            card.classList.add('show');
+        }, i * 80);
+    });
+}
 
-/* Карти */
+/* ===== КАРТИ ===== */
 const maps = [
-    {
+     {
         name: "Dust 2", 
         t: 49,
         ct: 51,
@@ -65,32 +93,26 @@ const maps = [
 
 function initMaps() {
     const container = document.getElementById('mapsContainer');
+
     container.innerHTML = maps.map(m => `
         <div class="map-card">
             <img src="${m.img}">
             <h3>${m.name}</h3>
 
             <div class="winrate">
-                <div class="t-bg" style="width:${m.t}%">
-                    T ${m.t}%
-                </div>
-                <div class="ct-bg" style="width:${m.ct}%">
-                    CT ${m.ct}%
-                </div>
+                <div class="t-bg" style="width:${m.t}%">T ${m.t}%</div>
+                <div class="ct-bg" style="width:${m.ct}%">CT ${m.ct}%</div>
             </div>
 
             <p>${m.fact}</p>
         </div>
     `).join('');
+
+    animateCards();
 }
 
-
-
-
-
-
-/* Ринок Steam */
-const skinsFN = [
+/* ===== РИНОК ===== */
+const skins = [
 { name: "AK-47 | Redline (FN)", price: 1700, rarity: "classified" },
 { name: "AK-47 | Asiimov (FN)", price: 5200, rarity: "covert" },
 { name: "AK-47 | Slate (FN)", price: 600, rarity: "milspec" },
@@ -142,47 +164,6 @@ const skinsFN = [
 { name: "Sawed-Off | Yaga (FN)", price: 3800, rarity: "restricted" }
 ];
 
-function renderMarket(list = skinsFN) {
-    const body = document.getElementById('mBody');
-    if (!body) return;
-
-    body.innerHTML = list.map(s => {
-        const color = rarityColors[s.rarity] || "#fff";
-
-        return `
-        <tr>
-            <td style="color:${color}; font-weight:600;">
-                ${s.name}
-            </td>
-            <td>Factory New</td>
-            <td>${s.price} ₴</td>
-        </tr>
-        `;
-    }).join('');
-}
-
-function initMarketSearch() {
-    const input = document.getElementById('mSearch');
-    if (!input) return;
-
-    input.addEventListener('input', (e) => {
-        const query = e.target.value.toLowerCase();
-
-        const filtered = skinsFN.filter(s =>
-            s.name.toLowerCase().includes(query)
-        );
-
-        renderMarket(filtered);
-    });
-}
-
-function initMarket() {
-    renderMarket();
-    initMarketSearch();
-
-    setInterval(() => renderMarket(), 300000);
-}
-
 const rarityColors = {
     consumer: "#b0c3d9",    
     industrial: "#5e98d9",  
@@ -199,9 +180,10 @@ function getPriceColor(price) {
     return "#ff4d4d";                        
 }
 
-function renderMarket(list = skinsFN) {
+
+
+function renderMarket(list = skins) {
     const body = document.getElementById('mBody');
-    if (!body) return;
 
     body.innerHTML = list.map(s => {
         const rarityColor = rarityColors[s.rarity] || "#fff";
@@ -221,9 +203,23 @@ function renderMarket(list = skinsFN) {
     }).join('');
 }
 
+function initMarket() {
+    renderMarket();
 
+    const input = document.getElementById('mSearch');
 
-/* Команди */
+    input.addEventListener('input', (e) => {
+        const q = e.target.value.toLowerCase();
+
+        const filtered = skins.filter(s =>
+            s.name.toLowerCase().includes(q)
+        );
+
+        renderMarket(filtered);
+    });
+}
+
+/* ===== КОМАНДИ ===== */
 const teams = [
     {
         name: "Team Vitality",
@@ -235,7 +231,7 @@ const teams = [
     {
         name: "Natus Vincere",
         logo: "https://upload.wikimedia.org/wikipedia/ru/thumb/5/5f/NAVI_Logo.svg/960px-NAVI_Logo.svg.png",
-        banner: "https://d3dwep9z8m8y9r.cloudfront.net/publications/2026/03/publications-11869/thumbnail/60749/Site_1738x800-1.png",
+        banner: "https://d3dwep9z8m8y9r.cloudfront.net/publications/2026/01/publications-11765/thumbnail/59353/Site_1738x800.png",
         coach: "B1ad3",
         players: ["b1t", "Aleksib", "iM", "w0nderful", "makazze"]
     },
@@ -256,7 +252,7 @@ const teams = [
     {
         name: "Team Falcons",
         logo: "https://upload.wikimedia.org/wikipedia/ru/9/9a/Team_Falcons_logo.png",
-        banner: "https://liquipedia.net/commons/images/thumb/e/e1/Team_Falcons_at_BLAST_Rivals_Fall_2025.jpg/450px-Team_Falcons_at_BLAST_Rivals_Fall_2025.jpg",
+        banner: "https://liontips.com/images/uploads2018/354996.jpg?v=1771043242",
         coach: "zonic",
         players: ["NiKo", "m0NESY", "TeSeS", "kyxsan", "kyousuke"]
     },
@@ -300,16 +296,15 @@ const teams = [
 function initTeams() {
     const list = document.getElementById('teamsList');
 
-    list.innerHTML = teams.map((team, index) => `
+    list.innerHTML = teams.map((team, i) => `
         <div class="team-card">
-
             <div class="team-banner">
                 <img src="${team.banner}">
             </div>
 
             <div class="team-info">
                 <div class="team-header">
-                    <span class="rank">#${index + 1}</span>
+                    <span class="rank">#${i + 1}</span>
                     <img src="${team.logo}">
                     <h3>${team.name}</h3>
                 </div>
@@ -318,13 +313,16 @@ function initTeams() {
                     ${team.players.map(p => `<span>${p}</span>`).join('')}
                 </div>
             </div>
-
         </div>
     `).join('');
+
+    animateCards();
 }
 
 window.onload = () => {
     initMaps();
-    initMarket(); 
+    initMarket();
     initTeams();
+
+    animateFade(document.querySelector('.page.active'));
 };
