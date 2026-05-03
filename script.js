@@ -210,12 +210,16 @@ function initMarket() {
 
     input.addEventListener('input', (e) => {
         const q = e.target.value.toLowerCase();
-
-        const filtered = skins.filter(s =>
-            s.name.toLowerCase().includes(q)
-        );
-
+        const filtered = skins.filter(s => s.name.toLowerCase().includes(q));
         renderMarket(filtered);
+    });
+
+    const orderBtn = document.getElementById('order-button'); 
+    
+    orderBtn.addEventListener('click', () => {
+        gtag('event', 'click_order_btn'); 
+        
+        console.log('Подія відправлена в GA!'); 
     });
 }
 
